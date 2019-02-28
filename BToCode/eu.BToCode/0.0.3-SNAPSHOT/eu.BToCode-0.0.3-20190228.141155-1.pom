@@ -1,0 +1,66 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>BToCode</groupId>
+	<artifactId>eu.BToCode</artifactId>
+
+
+	<packaging>jar</packaging>
+
+	<parent>
+		<groupId>eu.BToCode</groupId>
+		<artifactId>Server-lib</artifactId>
+		<version>0.0.3-SNAPSHOT</version>
+		<relativePath>../Server-lib</relativePath>
+	</parent>
+
+<!-- 
+	<scm>
+		<connection>scm:svn:https://svn.digitalbusinessolution.com/bluedeep/MavenRepositoryTest</connection>
+		<developerConnection>scm:svn:https://svn.digitalbusinessolution.com/bluedeep/MavenRepositoryTest</developerConnection>
+		<url>https://svn.digitalbusinessolution.com/bluedeep/MavenRepositoryTest</url>
+	</scm> 
+	-->
+	<!-- <build>-->
+		<!-- <plugins> <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-scm-publish-plugin</artifactId> 
+			<version>3.0.0</version> <extensions>true</extensions> <configuration> <pubScmUrl>scm:svn:https://svn.digitalbusinessolution.com/bluedeep/MavenRepositoryTest</pubScmUrl> 
+			</configuration> </plugin> </plugins> -->
+		<!-- <extensions>
+			<extension>
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>wagon-scm</artifactId>
+				<version>3.3.2</version>
+			</extension>
+			<extension>
+				<groupId>org.apache.maven.scm</groupId>
+				<artifactId>maven-scm-manager-plexus</artifactId>
+				<version>1.11.1</version>
+			</extension>
+			<extension>
+				<groupId>org.apache.maven.scm</groupId>
+				<artifactId>maven-scm-provider-svnexe</artifactId>
+				<version>1.11.1</version>
+			</extension>
+		</extensions>
+	</build>-->
+	<distributionManagement>
+		<!-- <repository>
+			<id>MavenSIRepositoryTest</id>
+			<url>scm:svn:https://svn.digitalbusinessolution.com/bluedeep/MavenRepositoryTest</url>
+		</repository>-->
+		<!-- <repository>
+			<id>MavenSIRepositoryTest_local</id>
+			<url>file:C:\workspaceBtoCodeProfessional\MavenRepositoryTest</url>
+		</repository>
+		-->
+		<repository>
+            <id>internal</id>
+            <url>file://${project.build.directory}/mvn-repo</url>
+        </repository>
+	</distributionManagement>
+	<!-- <distributionManagement> <repository> <id>MavenSIRepositoryTest</id> 
+		<url>https://svn.digitalbusinessolution.com/bluedeep/MavenRepositoryTest</url> 
+		</repository> </distributionManagement> -->
+
+</project>
